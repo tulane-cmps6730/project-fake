@@ -2,8 +2,8 @@
 
 """Top-level package for nlp."""
 
-__author__ = """A Student"""
-__email__ = 'student@example.com'
+__author__ = """Zhige Wang"""
+__email__ = 'zwang64@tulane.edu'
 __version__ = '0.1.0'
 
 # -*- coding: utf-8 -*-
@@ -14,11 +14,14 @@ import os
 # such as where data will be downloaded from.
 # here is an example.
 def write_default_config(path):
-	w = open(path, 'wt')
-	w.write('[data]\n')
-	w.write('url = https://www.dropbox.com/s/o0nxd8pnwy809u2/headlines.csv?dl=1\n')
-	w.write('file = %s%s%s\n' % (nlp_path, os.path.sep, 'headlines.csv'))
-	w.close()
+    return
+    # w = open(path, 'wt')
+    # w.write('[data]\n')
+    # w.write('urlfake = https://tulane.app.box.com/s/yqd2meu8exi6b66zp668nyahd1i2msvs?dl=1\n')
+    # w.write('urltrue = https://tulane.box.com/s/sqek0ugmvst7bysz7bfpm5s0pm6xs655?dl=1\n')
+    # w.write('filefake = %s%s%s\n' % (nlp_path, os.path.sep, 'fake.csv'))
+    # w.write('filetrue = %s%s%s\n' % (nlp_path, os.path.sep, 'true.csv'))
+    # w.close()
 
 # Find NLP_HOME path
 if 'NLP_HOME' in os.environ:
@@ -35,7 +38,7 @@ except:
 # main config file.
 config_path = nlp_path + 'nlp.cfg'
 # classifier
-clf_path = nlp_path + 'clf.pkl'
+model_path = nlp_path + 'model.pkl'
 
 # write default config if not present.
 if not os.path.isfile(config_path):
